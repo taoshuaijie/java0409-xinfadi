@@ -26,7 +26,7 @@ import com.offcn.service.EggInfoServiceImpl;
 public class CatUrlHtml {
 
 public static void main(String[] args) throws Exception {
-		
+		//**********
 		CatUrlHtml cuh = new CatUrlHtml();
 		cuh.catEgg();
 	}
