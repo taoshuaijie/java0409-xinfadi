@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.offcn.dao.EggInfoDao">
+    <select id="getlist" resultType="com.offcn.bean.EggInfo">
+    	SELECT * FROM egginfo WHERE pubDate &gt;=#{beginDate} AND pubDate &lt;=#{endDate}  ORDER BY pubDate;
+    </select>
+    
+    <insert id="save" parameterType="com.offcn.bean.EggInfo">
+    	insert into egginfo (name,minPrice,avgPrice,maxPrice,standard,unit,pubDate) 
+    				  values(#{name},#{minPrice},#{avgPrice},#{maxPrice},#{standard},#{unit},#{pubDate});
+    </insert>
+   
+    
+</mapper>
